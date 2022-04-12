@@ -24,7 +24,8 @@ Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('/', [PlaceMapController::class, 'index'])->name('frontpage');
-Route::get('/place/data', [DataController::class, 'places'])->name('place.data'); // DATA TABLE CONTROLLER
+Route::get('/place/data', [DataController::class, 'places'])->name('place.data');
+// DATA TABLE CONTROLLER
 
 Route::group(['middleware' => ['auth']], function () {
     Route::resource('places', 'App\Http\Controllers\PlaceController');

@@ -9,7 +9,8 @@ class PlaceMapController extends Controller
 {
     public function index()
     {
-        $places = Place::all();
-        return view('places.map', compact('places'));
+        return view('places.map2');
+        // $places = Place::all();
+        // return view('places.map', compact('places'));
     }
 }
